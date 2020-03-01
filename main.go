@@ -14,8 +14,10 @@ import (
 func main() {
 	flag.Usage = func() {
 		fmt.Fprint(os.Stderr,
-			`Usage: zendesk-to-canny -z-url zendesk_url -z-username zendesk_username -z-password zendesk_userpassword -c-key canny_api_key \
-                              zendesk_topic_id:canny_board_id [zendesk_topic_id:canny_board_id [zendesk_topic_id:canny_board_id...]]
+			`Usage: zendesk-to-canny \
+              -z-url zendesk_url -z-username zendesk_username -z-password zendesk_userpassword \
+              -c-key canny_api_key \
+              zendesk_topic_id:canny_board_id [zendesk_topic_id:canny_board_id [zendesk_topic_id:canny_board_id...]]
 Options:
   --z-url url                  Required. Zendesk URL (e.g. https://your_company.zendesk.com) 
   --z-username username        Required. User name to access Zendesk API
